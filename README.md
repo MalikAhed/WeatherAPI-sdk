@@ -7,7 +7,7 @@ A TypeScript client for [WeatherAPI.com](https://www.weatherapi.com/docs/), buil
 Use Node 24. Clone the repository, then install and build the client:
 
 ```sh
-git clone https://github.com/MalikAhed/weatherapi-sdk.git
+git clone https://github.com/MalikAhed/WeatherAPI-sdk.git
 cd weatherapi-sdk/ts
 npm ci
 npm run build
@@ -48,7 +48,7 @@ The generated tests run offline. The focused SDK passes 218 tests, with 0 failur
 
 | Path | Purpose |
 | --- | --- |
-| `.sdk/def/openapi.json` | Official provider input, downloaded on 8 October 2026 |
+| `.sdk/def/openapi.json` | Focused provider input used for this assessment |
 | `.sdk/model/project.aontu` | Repository, author and package decisions |
 | `.sdk/` | Generator, model, templates and components |
 | `ts/src/` | Generated TypeScript client |
