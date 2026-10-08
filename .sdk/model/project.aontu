@@ -1,0 +1,11 @@
+# Project decisions survive regeneration.
+main: kit: repo: path: 'MalikAhed/weatherapi-sdk'
+main: kit: publisher: {
+  name: 'Malik Abuallatta'
+  url: 'https://github.com/MalikAhed'
+}
+main: kit: target: ts: publish: version: '0.1.0'
+main: kit: target: ts: publish: registry: package: '@malikahed/weatherapi-sdk'
+
+# Keep the short repository README and CI under project ownership.
+main: kit: phase: top: active: false

@@ -1,0 +1,20 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "API key obtained from https://www.weatherapi.com/my/. Pass as `?key=YOUR_API_KEY` query parameter.",
+      "Current weather data",
+      "Forecast weather data",
+      "List of matching locations",
+      "Location metadata returned with every weather response.",
+      "Production (HTTP)",
+      "Production (HTTPS)",
+      "URL-safe location slug",
+      "WeatherAPI.com assessment surface: current weather, forecasts, and location search. Derived from the provider OpenAPI document; see openapi.source.json for the complete snapshot."
+    ]
+  }
+}

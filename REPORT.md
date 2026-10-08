@@ -1,0 +1,56 @@
+# Voxgig SDKGen assessment report
+
+**API:** WeatherAPI.com  
+**Input:** `openapi.json`, a focused assessment surface derived from the provider snapshot retrieved 2026-10-08  
+**Generator:** `@voxgig/create-sdkgen@0.30.6`  
+**Target:** TypeScript  
+**License:** MIT  
+**Author:** Malik Abuallatta
+
+## What I built
+
+I generated a TypeScript SDK for three useful WeatherAPI operations: current weather, forecasts, and location search. The complete provider OpenAPI snapshot is kept as `openapi.source.json`; `openapi.json` is the smaller input used for this time-boxed exercise. The repository keeps the model in `.sdk/` and the generated client and tests in `ts/`.
+
+The only handwritten runtime file is `scripts/live-smoke.mjs`. The client, transport, types, entities, and offline tests are generated output.
+
+## What worked
+
+- The provider OpenAPI document was accepted by Voxgig SDKGen.
+- The focused model generated `Current`, `Forecast`, and `Search` entities.
+- The generated TypeScript project built successfully.
+- The generated offline suite passed **218 tests**, with **0 failures** and **11 skipped** tests on Node 24.
+- `voxgig-sdkgen doctor` reports that the project matches the scaffold.
+- The repository contains no API key.
+
+## Scope decision
+
+The full provider document contains advanced and plan-dependent operations. It also contains a non-standard `/current.json#bulk` path that caused a generated credential-definition failure in the initial full-spec run. I kept that exact document as `openapi.source.json` and generated the assessment SDK from a focused three-path copy. This keeps the review surface small and leaves the scope decision easy to inspect.
+
+## Generator friction
+
+The first scaffold install hit an npm peer-dependency conflict: the generated project requested `@voxgig/apidef~8.22.1`, while `@voxgig/sdkgen@4.34.1` requires `@voxgig/apidef >=8.23.0`. Installing with `--legacy-peer-deps` and adding the missing `@tabnas/hoover` dependency allowed generation to continue. The workaround is recorded in the README and `.sdk/package.json`.
+
+A live API request was not run because no WeatherAPI key was supplied. The repository includes `scripts/live-smoke.mjs` for a user-owned key; it never prints the key or commits it.
+
+## Recommendations
+
+1. Pin compatible `apidef` and `sdkgen` versions in the scaffold template so a new project installs without a peer conflict.
+2. Make the `@tabnas/hoover` dependency explicit if the toolchain requires it.
+3. Warn when an OpenAPI path contains a fragment such as `/current.json#bulk`, or normalize it before model generation.
+4. Document a focused-input workflow for 30-minute assessments so a candidate can keep the public review surface small without hiding the complete source definition.
+5. Make the generated README example work in the offline test transform without requiring an environment variable before construction.
+
+## Verification commands
+
+```sh
+cd .sdk
+npm ci --legacy-peer-deps
+npm run generate
+npx voxgig-sdkgen doctor
+cd ../ts
+npm ci
+npm run build
+npm test
+```
+
+The local Node 24 run completed with 218 passing, 0 failing and 11 skipped tests.

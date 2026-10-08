@@ -1,0 +1,43 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "WeatherAPI.com Support"
+        url: "https://www.weatherapi.com/contact.aspx"
+      }
+      description: "WeatherAPI.com assessment surface: current weather, forecasts, and location search. Derived from the provider OpenAPI document; see openapi.source.json for the complete snapshot."
+      license: {
+        name: "Commercial / Non-Commercial"
+        url: "https://www.weatherapi.com/terms.aspx"
+      }
+      security: {
+        in: "query"
+        name: "key"
+        prefix: ""
+        scheme: "ApiKeyAuth"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          description: "Production (HTTPS)"
+          url: "https://api.weatherapi.com/v1"
+        }
+        {
+          description: "Production (HTTP)"
+          url: "http://api.weatherapi.com/v1"
+        }
+      ]
+      summary: "WeatherAPI.com assessment surface: current weather, forecasts, and location search."
+      title: "WeatherAPI.com"
+      version: "1.0.3"
+      website: "https://www.weatherapi.com/docs/"
+      "x-logo": {
+        url: "https://cdn.weatherapi.com/v4/images/weatherapi_logo.png"
+      }
+    }
+  }
+}
+
