@@ -292,7 +292,7 @@ async function executeBlocks(blocks: string[]): Promise<string[]> {
     // Strip the snippet's types so it runs under node exactly as a real
     // caller would.
     const js = null != strip
-      ? strip(src, { mode: 'transform' })
+      ? strip(src, { mode: 'strip' })
       : ts.transpileModule(src, {
         compilerOptions: {
           target: ts.ScriptTarget.ES2020,

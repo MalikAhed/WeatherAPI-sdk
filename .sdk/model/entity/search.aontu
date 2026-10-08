@@ -94,6 +94,10 @@ main: kit: entity: search: {
               "q"
             ]
           }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "search.json"

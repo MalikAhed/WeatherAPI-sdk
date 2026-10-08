@@ -6,3 +6,18 @@
 
 
 
+
+# Keep the complete WeatherAPI response envelope so Current and Forecast
+# entities expose both location and weather fields.
+guide: {
+  entity: current: {
+    path: "/current.json": {
+      op: load: transform: res: *("`body`")|top
+    }
+  }
+  entity: forecast: {
+    path: "/forecast.json": {
+      op: load: transform: res: *("`body`")|top
+    }
+  }
+}

@@ -120,7 +120,7 @@ class Config {
               "rename": {},
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body.current`"
+                "res": "`body`"
               },
               "args": {
                 "query": [
@@ -171,13 +171,13 @@ class Config {
               },
               "select": {
                 "exist": [
-                  "aqi",
-                  "current_field",
                   "key",
-                  "lang",
-                  "pollen",
                   "q"
                 ]
+              },
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]
@@ -232,7 +232,7 @@ class Config {
               "rename": {},
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body.forecast`"
+                "res": "`body`"
               },
               "args": {
                 "query": [
@@ -335,21 +335,14 @@ class Config {
               },
               "select": {
                 "exist": [
-                  "alert",
-                  "aqi",
                   "day",
-                  "day_field",
-                  "dt",
-                  "et0",
-                  "hour",
-                  "hour_field",
                   "key",
-                  "lang",
-                  "pollen",
-                  "q",
-                  "tp",
-                  "unixdt"
+                  "q"
                 ]
+              },
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]
@@ -450,6 +443,10 @@ class Config {
                   "key",
                   "q"
                 ]
+              },
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]

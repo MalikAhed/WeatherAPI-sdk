@@ -211,15 +211,15 @@
                   "o": "/current.json",
                   "q": {
                     "exist": [
-                      "aqi",
-                      "current_field",
                       "key",
-                      "lang",
-                      "pollen",
                       "q"
                     ]
                   },
                   "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
                   "s": [
                     {
                       "lit": "current.json"
@@ -227,7 +227,7 @@
                   ],
                   "t": {
                     "req": "`reqdata`",
-                    "res": "`body.current`"
+                    "res": "`body`"
                   }
                 }
               ]
@@ -415,23 +415,16 @@
                   "o": "/forecast.json",
                   "q": {
                     "exist": [
-                      "alert",
-                      "aqi",
                       "day",
-                      "day_field",
-                      "dt",
-                      "et0",
-                      "hour",
-                      "hour_field",
                       "key",
-                      "lang",
-                      "pollen",
-                      "q",
-                      "tp",
-                      "unixdt"
+                      "q"
                     ]
                   },
                   "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
                   "s": [
                     {
                       "lit": "forecast.json"
@@ -439,7 +432,7 @@
                   ],
                   "t": {
                     "req": "`reqdata`",
-                    "res": "`body.forecast`"
+                    "res": "`body`"
                   }
                 }
               ]
@@ -555,6 +548,10 @@
                     ]
                   },
                   "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
                   "s": [
                     {
                       "lit": "search.json"

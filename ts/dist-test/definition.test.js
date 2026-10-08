@@ -16,15 +16,18 @@ const PLAN = [
         "path": "/current.json",
         "args": [],
         "select": {
-            "aqi": "v1",
-            "current_field": "v1",
             "key": "YOUR_API_KEY",
+            "q": "London",
+            "aqi": "no",
+            "current_field": "v1",
             "lang": "fr",
-            "pollen": "v1",
-            "q": "London"
+            "pollen": "no"
         },
         "headers": [],
         "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "key",
             "q",
@@ -106,23 +109,26 @@ const PLAN = [
         "path": "/forecast.json",
         "args": [],
         "select": {
-            "alert": "v1",
-            "aqi": "v1",
             "day": "v1",
+            "key": "YOUR_API_KEY",
+            "q": "London",
+            "alert": "no",
+            "aqi": "no",
             "day_field": "v1",
             "dt": "v1",
             "et0": "v1",
             "hour": "v1",
             "hour_field": "v1",
-            "key": "YOUR_API_KEY",
             "lang": "fr",
-            "pollen": "v1",
-            "q": "London",
+            "pollen": "no",
             "tp": "v1",
             "unixdt": 1490227200
         },
         "headers": [],
         "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "key",
             "q",
@@ -406,6 +412,9 @@ const PLAN = [
         },
         "headers": [],
         "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "key",
             "q"

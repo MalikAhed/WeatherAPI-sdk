@@ -86,13 +86,13 @@ main: kit: entity: current: {
           o: "/current.json"
           q: {
             exist: [
-              "aqi"
-              "current_field"
               "key"
-              "lang"
-              "pollen"
               "q"
             ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {
@@ -101,7 +101,7 @@ main: kit: entity: current: {
           ]
           t: {
             req: "`reqdata`"
-            res: "`body.current`"
+            res: "`body`"
           }
         }
       ]
