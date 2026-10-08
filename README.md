@@ -42,7 +42,7 @@ npm ci
 npm test
 ```
 
-The generated tests run offline. The original full-spec run had one failing bulk authentication test on Node 24; see [the report](REPORT.md) for the final results and limitations. CI runs the complete suite and reports failures.
+The generated tests run offline. The focused SDK passes 218 tests, with 0 failures and 11 skipped checks for features that were not selected. See [the report](REPORT.md) for the full-spec bulk failure and live-testing limitation. CI runs the complete suite and reports failures.
 
 ## Files
 
@@ -73,4 +73,4 @@ Edit the input or model and regenerate; keep the TypeScript output generated. Th
 
 ## License
 
-MIT. Original project contributions are copyright Malik Abuallatta. Voxgig templates and bundled third-party code retain their notices. AI assisted research, generation and verification; its use is described in the report.
+MIT. Original project contributions are copyright Malik Abuallatta. Voxgig templates and bundled third-party code retain their notices; the provider specification retains its original terms. See [third-party notices](THIRD_PARTY_NOTICES.md). AI assisted research, generation and verification; its use is described in the report.
