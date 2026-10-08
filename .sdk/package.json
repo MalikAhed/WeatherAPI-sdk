@@ -28,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": ">=25.6",
-    "@voxgig/apidef": "~8.22.1",
+    "@voxgig/apidef": "~8.23.0",
     "@voxgig/docgen": "~0.30.0",
     "@voxgig/model": "~12.0.0",
     "@voxgig/sdkgen": "~4.34.0",
