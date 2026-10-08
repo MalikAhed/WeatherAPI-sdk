@@ -20,6 +20,7 @@ The only handwritten runtime file is `scripts/live-smoke.mjs`. The client, trans
 - The generated TypeScript project built successfully.
 - The generated offline suite passed **218 tests**, with **0 failures** and **11 skipped** tests on Node 24.
 - `voxgig-sdkgen doctor` reports that the project matches the scaffold.
+- A clean shallow clone from GitHub installed, built, and passed the same 218-test Node 24 run.
 - The repository contains no API key.
 
 ## Scope decision
