@@ -8,7 +8,7 @@ Use Node 24. Clone the repository, then install and build the client:
 
 ```sh
 git clone https://github.com/MalikAhed/WeatherAPI-sdk.git
-cd weatherapi-sdk/ts
+cd WeatherAPI-sdk/ts
 npm ci
 npm run build
 ```
